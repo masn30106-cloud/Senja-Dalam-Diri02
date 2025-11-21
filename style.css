@@ -1,0 +1,135 @@
+/* --- 1. RESET DAN FONT --- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /*Warna Sunset Pastel */
+    --color-peach: #FFC0CB; /*Pink lembut, dekat peach */
+    --color-lavender: #FBB825;
+    --color-soft-purple: #FF7F00;
+    --color-baby-blue: #ADD8E6;
+    --color-white: #FFFDD0;
+    --color-text-dark: #333333;
+
+    /*Gradient Senja (Orange -> Ungu) */
+    --gradient-sunset: linear gradient(135deg, #FF8C00, #9370DB); /* Dark Orange ke Medium Purple */
+
+   /* Font */
+   --font-heading: 'Playfair Display', sans-serif; /* Untuk judul (Playfair Display) */
+   --font-body: 'Poppins', 'Sans-serif', sans-serif; /* Untuk teks isi (poppins) */
+
+   /* Gaya Desain */ 
+   --border-radius-soft: 12px;
+   --shadow-light: 0 4px 6px rgba(0, 0, 0, 0,1);
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    background-color: var(--color-lavender); /* Warna latar belakang umum */
+}
+
+/* --- 2. TATA LETAK UMUM --- */
+.section {
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-soft-purple);
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: var(--border-radius-soft);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.primary {
+    background: var(--gradient-sunset);
+    color: var(--color-white);
+    border: none;
+    box-shadow: var(--shadow-light);
+}
+
+/* --- 3. HEADER & NAVIGASI --- */
+header {
+    background: var(--gradient-sunset);
+    color: var(--color-white);
+    text-align: center;
+    padding: 40px 5% 80px;
+    /* Efek Rounded corners & shadow ringan diterapkan pada elemen di dalamnya */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-betwen;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+}
+
+.logo  {
+    font-family: var(--font-heading);
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.navbar ul li a: hover {
+    color: var(--color-white);
+    text-decoration: none;
+    margin-left: 20px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.navbar ul li a:hover {
+    opacity: 1;
+}
+
+/* Header Quote */
+header h1 {
+    font-size: 2.5em;
+    font-weight: 400;
+    color: var(--color-white);
+    font-style: italic;
+}
+
+/* --- 4. KHUSUS BAGIAN BERANDA --- */
+.quick-action-button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.article-card, .card {
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: var(--border-radius-soft);
+    box-shadow: var(--shadow-light);
+    margin-bottom: 20px;
+    /* Banyak ruang putih */
+}
+
+/* --- 5. FOOTER --- */
+footer {
+    text-align: center;
+    padding: 30px 5%;
+    background-color: var(--color-soft-purple);
+    color: var(--color-white);
+}
+
+.mini-affirmation {
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
